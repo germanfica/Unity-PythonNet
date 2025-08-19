@@ -9,6 +9,19 @@ This is a sample project that integrates Unity and Python.NET.
 - [Python.NET](https://www.nuget.org/packages/pythonnet) 3.0.5
 - [Python Embeddable Package](https://www.python.org/downloads/windows/) 3.10.0
 
+## Project structure
+
+```plaintext
+Assets/
+ ├─ Plugins/
+ │   └─ Python.Runtime.dll      <-- the .NET <-> Python bridge
+ └─ StreamingAssets/
+     └─ python-3.10.0-embed-amd64/
+         ├─ python310.dll       <-- the native interpreter
+         ├─ python.exe
+         ├─ (other .pyd files, stdlib.zip)
+```
+
 ## Credits
 
 This project was inspired by the work of **shiena** and the repository [Unity-PythonNet](https://github.com/shiena/Unity-PythonNet) (MIT License).  
