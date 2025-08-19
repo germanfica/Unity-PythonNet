@@ -5,7 +5,7 @@ This is a sample project that integrates Unity and Python.NET.
 ## Prerequisites
 
 - Windows
-- Unity 2022.3.15f1 (.NET Framework or both .NET Standard 2.0 and [Microsoft.CSharp](https://www.nuget.org/packages/microsoft.csharp/) is required at Api Compatibility Level)
+- Unity 2022.3.15f1 (.NET Framework or both .NET Standard 2.1 and [Microsoft.CSharp](https://www.nuget.org/packages/microsoft.csharp/) is required at Api Compatibility Level)
 - [Python.NET](https://www.nuget.org/packages/pythonnet) 3.0.5
 - [Python Embeddable Package](https://www.python.org/downloads/windows/) 3.10.0
 
