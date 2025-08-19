@@ -9,6 +9,34 @@ This is a sample project that integrates Unity and Python.NET.
 - [Python.NET](https://www.nuget.org/packages/pythonnet) 3.0.5
 - [Python Embeddable Package](https://www.python.org/downloads/windows/) 3.10.0
 
+### Quick Guide to NuGet Packages
+
+**Option 1: Using NuGet CLI**
+
+Download NuGet CLI:
+
+* [NuGet Downloads](https://www.nuget.org/downloads)
+* [Latest nuget.exe](https://dist.nuget.org/win-x86-commandline/latest/nuget.exe)
+* [Specific version (v6.14.0)](https://dist.nuget.org/win-x86-commandline/v6.14.0/nuget.exe)
+
+Then install the packages:
+
+```bash
+./nuget.exe install Microsoft.CSharp -Version 4.7.0
+./nuget.exe install pythonnet -Version 3.0.5
+```
+
+---
+
+**Option 2: Direct .nupkg Download**
+
+Alternatively, you can download the `.nupkg` files directly (they are essentially ZIP archives):
+
+* [Microsoft.CSharp 4.7.0](https://www.nuget.org/api/v2/package/Microsoft.CSharp/4.7.0)
+* [pythonnet 3.0.5](https://www.nuget.org/api/v2/package/pythonnet/3.0.5)
+
+This method is faster since you can simply extract the `.dll` files from the package manually.
+
 ## Project structure
 
 ```plaintext
