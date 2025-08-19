@@ -30,12 +30,12 @@ public class PythonProjectUI : MonoBehaviour
                 using (PyObject calc = Py.Import("calc"))
                 {
                     PyObject result = calc.InvokeMethod("heavy_math");
-                    resultText.text = "Resultado Python: " + result.ToString();
+                    resultText.text = "Result from Python: " + result.ToString();
                 }
             }
             catch (PythonException ex)
             {
-                Debug.LogError("Error Python: " + ex.Message + "\n" + ex.StackTrace);
+                Debug.LogError("Python error: " + ex.Message + "\n" + ex.StackTrace);
             }
         }
 
