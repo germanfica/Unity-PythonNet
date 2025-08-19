@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MyAssets/Scenes/PythonTestScene.unity
+    guid: 471525ddee240854c8e8b67c64aea696
   m_configObjects: {}
