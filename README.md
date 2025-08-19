@@ -42,12 +42,25 @@ This method is faster since you can simply extract the `.dll` files from the pac
 ```plaintext
 Assets/
  ├─ Plugins/
- │   └─ Python.Runtime.dll      <-- the .NET <-> Python bridge
+ │   └─ Python.Runtime.dll                <-- the managed .NET <-> Python bridge
+ │
  └─ StreamingAssets/
      └─ python-3.10.0-embed-amd64/
-         ├─ python310.dll       <-- the native interpreter
-         ├─ python.exe
-         ├─ (other .pyd files, stdlib.zip)
+         ├─ python310.dll                 <-- the native Python interpreter (required by Runtime.PythonDLL)
+         ├─ python.exe                    <-- optional, useful for testing the embedded environment manually
+         ├─ python310.zip                 <-- original compressed standard library (can be removed after extraction)
+         │
+         └─ Lib/                          <-- must be created manually
+             ├─ __future__.py             <-- extracted from python310.zip (part of the Python standard library)
+             ├─ os.py                     <-- extracted from python310.zip
+             ├─ encodings/                <-- extracted from python310.zip
+             ├─ importlib/                <-- extracted from python310.zip
+             ├─ ... (all other stdlib modules extracted here)
+             │
+             └─ site-packages/            <-- external dependencies go here
+                 ├─ numpy/                <-- installed via "pip install numpy --target=Lib/site-packages"
+                 ├─ numpy-1.26.4.dist-info/
+                 ├─ (other dependencies)
 ```
 
 ## Credits
