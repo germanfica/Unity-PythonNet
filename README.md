@@ -37,6 +37,35 @@ Alternatively, you can download the `.nupkg` files directly (they are essentiall
 
 This method is faster since you can simply extract the `.dll` files from the package manually.
 
+## Installation
+
+**Important Notes for Setup**
+
+1. **Do not install packages directly from `python-3.10.0-embed-amd64`**.
+   The embeddable distribution is not designed for package management.
+
+2. Instead, create and use a virtual environment inside:
+
+   ```
+   \Assets\StreamingAssets\python_project
+   ```
+
+   Run the following commands:
+
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate
+   python -m pip install numpy==1.26.4 --target ..\Lib\site-packages
+   ```
+
+3. You must also extract the `python310.zip` archive into:
+
+   ```
+   \Assets\StreamingAssets\python-3.10.0-embed-amd64\Lib\
+   ```
+
+4. **Note:** Python scripts (`.py` files) will remain exposed when building a Unity project. Keep this in mind if you plan to distribute the Unity client to other users.
+
 ## Project structure
 
 ```plaintext
