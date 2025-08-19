@@ -2,6 +2,10 @@
 Python.Runtime.dll
 Python.Runtime.dll.meta
 
+# python-3.10.0-embed-amd64
+python-3.10.0-embed-amd64
+python-3.10.0-embed-amd64.meta
+
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
